@@ -32,6 +32,7 @@ class ModelTrainer:
                 test_array[:,:-1],
                 test_array[:,-1]
             )
+            # Models
             models ={
                 "Random Forest": RandomForestRegressor(),
                 "Decision Tree": DecisionTreeRegressor(),
@@ -43,6 +44,7 @@ class ModelTrainer:
                 "AdaBoost Regressor": AdaBoostRegressor()
                 
             }
+            #Hyperparameter Tunning
             params={
                 "Decision Tree": {
                     'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
